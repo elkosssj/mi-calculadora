@@ -1,0 +1,84 @@
+/* Centrado de la calculadora en pantalla */
+body {
+    background-color: #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Marco principal con color crema */
+.calculadora-marco {
+    background-color: #fdf6d8;
+    border: 2px solid #000;
+    padding: 15px;
+    width: 320px;
+    box-shadow: 6px 6px 0px #555;
+}
+
+/* Contenedor de la pantalla blanca */
+.pantalla-container {
+    background-color: #fff;
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 10px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-pantalla {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
+
+#operacion { 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    height: 30px; 
+    margin-top: 5px;
+}
+
+#resultado { 
+    font-size: 2.4rem; 
+    text-align: right; 
+    font-weight: bold; 
+    margin-bottom: -5px;
+}
+
+/* Configuración de la cuadrícula de botones */
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 2px solid #000;
+    background-color: #e5e7eb;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #ccc;
+}
+
+/* Clases especiales para colores y tamaños */
+.btn-borrar-largo { grid-column: span 2; background-color: #ffb3ba; }
+.btn-off { background-color: #c0a0d3; font-style: italic; }
+.btn-c { background-color: #ffb3ba; }
+.btn-op-rojo { background-color: #ffb3ba; }
+.btn-op-azul { background-color: #bae1ff; }
+.btn-igual { background-color: #baffc9; }
